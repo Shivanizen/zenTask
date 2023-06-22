@@ -1,7 +1,7 @@
 name: hello-world
 on: push
 env:
-    Name: shivani
+    Name: GITHUB_PATH
 jobs:
   my-job:
     runs-on: ubuntu-latest
