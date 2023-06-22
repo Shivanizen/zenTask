@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "$GITHUB_CONTEXT:hello world!!!!!!!"
+        run: echo "$GITHUB_CONTEXT"
