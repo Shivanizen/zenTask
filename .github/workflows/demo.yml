@@ -1,9 +1,10 @@
 name: hello-world
 on: push
-
+env:
+    GITHUB_CONTEXT: ${{ GITHUB_ACTION_PATH }}
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "hello world!!!!!!!"
+        run: echo "$GITHUB_CONTEXT:hello world!!!!!!!"
