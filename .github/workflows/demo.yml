@@ -3,7 +3,7 @@ name: Test
 on: push
 
 env:
-  V1: core.summary
+  V1: core.addPath
 
 jobs:
   greeting_job:
