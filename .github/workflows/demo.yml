@@ -3,7 +3,7 @@ name: Test
 on: push
 
 env:
-  V1: core.exportVariable
+  V1: core.summary
 
 jobs:
   greeting_job:
