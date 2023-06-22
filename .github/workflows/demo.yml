@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "${{GITHUB_PATH}}"
+        run: echo ${{ env.GITHUB_WORKSPACE }}
