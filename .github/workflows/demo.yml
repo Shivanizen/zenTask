@@ -1,9 +1,10 @@
 name: hello-world
 on: push
-
+env:
+  PATH: "zenTask/translation/test.yml"
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo ${{ env.GITHUB_PATH }}
+        run: echo $PATH
