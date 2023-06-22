@@ -1,8 +1,14 @@
-name: hello-world
+name: Test
+
 on: push
+
+env:
+  V1: core.exportVariable
+
 jobs:
-  my-job:
+  greeting_job:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$V1"
+        
