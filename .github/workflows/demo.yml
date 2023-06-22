@@ -1,4 +1,4 @@
-name: new file
+name: hello-world
 on: push
 
 jobs:
