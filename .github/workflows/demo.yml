@@ -8,5 +8,6 @@ jobs:
     steps:
       - name: my-step
         run:
+            if echo "${{ env.PATH}}"
               echo "Hello"
         
