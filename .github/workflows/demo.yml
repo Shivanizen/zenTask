@@ -11,7 +11,6 @@ jobs:
         if: ${{env.PATH}} grep -q "translation" then
         run:
             ls
-            pwd
            echo "Hello"
            
         
