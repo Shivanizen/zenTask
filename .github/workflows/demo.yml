@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-         pwd
+         ls
         if: ${{env.PATH}} grep -q "translation" then
         run:
            echo "Hello"
