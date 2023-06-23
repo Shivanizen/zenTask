@@ -19,11 +19,9 @@ jobs:
 
 
 
-
-
       - name: printing ls command
       
 
         run: |
-
+          cd..
           ls
