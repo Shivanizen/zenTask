@@ -14,8 +14,8 @@ jobs:
       - name: my-step
            
         run: |
-                 contains(eval ("git diff-tree --no-commit-id --name-only -r ${{ github.sha }}"), translationfile)
-                
+               $test = git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+                  $ eval $test
                  echo "Hello"
            
            
