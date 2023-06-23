@@ -1,7 +1,7 @@
 name: hello-world
 on: push
-env:
-  PATH: "zenTask/translation/test.yml"
+# env:
+#   PATH: "zenTask/translation/test.yml"
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
           # Default: 1
           fetch-depth: 2
       - name: my-step
-#         if: ${{env.PATH}} grep -q "translation" then
+
         run: |
           git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
           echo "Hello"
