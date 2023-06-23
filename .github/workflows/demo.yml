@@ -14,7 +14,7 @@ jobs:
       - name: my-step
            
         run: |
-                y = $(eval git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
+                y = $(eval run git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
                  echo $y
                  echo "Hello"
            
