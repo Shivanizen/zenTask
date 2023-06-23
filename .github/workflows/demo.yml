@@ -15,7 +15,7 @@ jobs:
            
         run: |
                 y = $(eval git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
-                if: ${{y}} grep -q "translation" then
+                  echo $y
                  echo "Hello"
            
            
