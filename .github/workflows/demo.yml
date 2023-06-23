@@ -14,9 +14,8 @@ jobs:
       - name: my-step
            
         run: |
-                 $a = git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-                 $b= $($a)
-                 echo $b  
+                 contains(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}, translationfile)
+                
                  echo "Hello"
            
            
