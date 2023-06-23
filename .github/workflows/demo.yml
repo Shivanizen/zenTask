@@ -15,7 +15,7 @@ jobs:
            
         run: |
                  
-                 $test2 = eval $TEST
+                 test2 = eval $TEST
                  contains($test2, demo)
                  echo "Hello"
            
