@@ -10,5 +10,5 @@ jobs:
         if: ${{env.PATH}} grep -q "translation" then
         run:
            echo "Hello"
-           echo ${{GITHUB_PATH}}
+           
         
