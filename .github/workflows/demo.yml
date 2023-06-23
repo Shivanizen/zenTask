@@ -14,8 +14,9 @@ jobs:
       - name: my-step
            
         run: |
-               
+                 
                  eval $TEST
+                 contains(eval $TEST, demo)
                  echo "Hello"
            
            
