@@ -14,7 +14,8 @@ jobs:
       - name: my-step
            
         run: |
-                 $b= $(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
+                 $a = git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+                 $b= $($a)
                  echo $b  
                  echo "Hello"
            
