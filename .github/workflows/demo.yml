@@ -1,7 +1,7 @@
 name: hello-world
 on: push
-# env:
-#   PATH : ""
+env:
+  PATH : git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -14,8 +14,8 @@ jobs:
       - name: my-step
            
         run: |
-                 test = git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-                 eval $test
+               
+                 eval $PATH
                  echo "Hello"
            
            
