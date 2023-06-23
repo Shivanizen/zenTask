@@ -12,10 +12,10 @@ jobs:
           # Default: 1
           fetch-depth: 2
       - name: my-step
-
+           
         run: |
-          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-          echo "Hello"
+              if: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} grep -q "translation" then
+                 echo "Hello"
            
            
         
