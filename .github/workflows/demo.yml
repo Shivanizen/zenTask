@@ -9,8 +9,8 @@ jobs:
       - name: my-step
        
         if: ${{env.PATH}} grep -q "translation" then
-        run:
-            ls
+        run: | 
+          ls
            echo "Hello"
            
         
