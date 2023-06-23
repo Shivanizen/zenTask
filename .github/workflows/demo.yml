@@ -10,7 +10,8 @@ jobs:
        
         if: ${{env.PATH}} grep -q "translation" then
         run: | 
-          ls
+           git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
            echo "Hello"
+           
            
         
