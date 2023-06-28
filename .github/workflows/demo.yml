@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - id: files
-          uses: jitterbit/get-changed-files@v1
+          uses:jitterbit/get-changed-files@v1
        - run: |
            for changed_file in ${{ steps.files.outputs.all }}; do
            if [ $changed_file==*"trans/translationfile.yml"* ];
