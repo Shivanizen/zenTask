@@ -1,23 +1,20 @@
 name: hello-world
 on: push
-env:
-  TEST : git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          # Number of commits to fetch. 0 indicates all history for all branches and tags.
-          # Default: 1
-          fetch-depth: 2
-      - name: my-step
-           
-        run: |
-                 
-                 test2 = eval $TEST
-                 contains($test2, demo)
-                 echo "Hello"
+       - id: files
+          uses: jitterbit/get-changed-files@v1
+       - run: |
+           for changed_file in ${{ steps.files.outputs.all }}; do
+           if [ $changed_file==*"trans/translationfile.yml"* ];
+           then
+              echo "Dont do  ${changed_file}."
+           else
+              echo "Do something with this ${changed_file}."
+           fi 
+           done
            
            
         
