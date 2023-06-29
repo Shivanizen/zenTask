@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo git diff
+        run: git diff
              echo "Hello World!"
            
            
