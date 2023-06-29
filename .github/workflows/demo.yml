@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: my-step
         run: 
-            echo git diff
+             git diff COMMIT
            
            
         
