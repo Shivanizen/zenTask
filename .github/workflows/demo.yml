@@ -14,13 +14,13 @@ jobs:
         run: |
              files=`git diff --name-only HEAD HEAD^`
              for file in $files; do
-             echo $file
-             if [ $file==*"trans"* ];
-              then
-              echo "Dont do  ${file}."
-             else
-              echo "Do something with this ${file}."
-             fi 
+               echo $file
+               if [ $file==*"trans"* ];
+               then
+               echo "Dont do  ${file}."
+              else
+               echo "Do something with this ${file}."
+              fi 
              done       
     
         
