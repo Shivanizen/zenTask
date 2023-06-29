@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 2
       - id: files       
         run: |
-              git diff --name-only HEAD HEAD^
+             TEST: git diff --name-only HEAD HEAD^
         
 
            
