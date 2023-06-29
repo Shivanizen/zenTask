@@ -15,7 +15,7 @@ jobs:
              files=`git diff --name-only HEAD HEAD^`
                for file in $files; do
                 echo "hii" $file
-                 if [ $file==*"trans/abc.html"* ];
+                 if [[ $file == *"trans"* ]];
                   then
                    echo "Dont do  ${file}."
                    else
