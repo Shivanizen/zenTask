@@ -13,8 +13,8 @@ jobs:
           fetch-depth: 2
       - id: files       
         run: |
-              if: ${{git diff --name-only HEAD HEAD^}} grep -q "translation" then
-              echo "success"
+              git diff --name-only HEAD HEAD^
+              
               
         
 
