@@ -12,7 +12,6 @@ jobs:
           fetch-depth: 2
       - id: files       
         run: |
-             echo "hello,,,"
              files=`git diff --name-only HEAD HEAD^`
              for file in $files; do
              if [ $file==*"trans"* ];
