@@ -1,5 +1,7 @@
 name: hello-world
 on: push
+env: 
+    TEST : git diff --name-only HEAD HEAD^
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -11,7 +13,8 @@ jobs:
           fetch-depth: 2
       - id: files       
         run: |
-         git diff --name-only HEAD HEAD^
+          TEST
+        
 
            
         
