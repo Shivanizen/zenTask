@@ -17,4 +17,4 @@ jobs:
       - name: check for list of changed files
         run: |
           git fetch origin main --depth 1
-          git diff --name-only ${{ github.sha }} origin/main
+          git diff --name-only ${{ github.sha }} .github/workflows
