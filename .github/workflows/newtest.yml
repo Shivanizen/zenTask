@@ -1,6 +1,6 @@
 name: Skip Cypress for translation files
 on:
-  pull_request:
+  push:
     branches:
       - main
 
